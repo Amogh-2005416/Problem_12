@@ -151,8 +151,8 @@
 % page by selecting the code and pressing F9. You can also Select Code >
 % Right Click > Select "Evaluate Selection".
 
-open_system('problem_2'); % code does not appear in the example HTML
-evalc('sim(''problem_2'')'); %simulate and don't display output
+open_system('problemm_2'); % code does not appear in the example HTML
+evalc('sim(''problemm_2'')'); %simulate and don't display output
 
 %%
 % *Figure 3:* Top level diagram for the clutch model 
@@ -173,7 +173,7 @@ evalc('sim(''problem_2'')'); %simulate and don't display output
 % states and the subsystem inputs of engine torque, |Tin|, and clutch capacity,
 % |Tfmaxk|.
 
-open_system('problem_2/Unlocked');
+open_system('problemm_2/Unlocked');
 
 %%
 % *Figure 4:* The 'Unlocked' subsystem
@@ -226,7 +226,7 @@ open_system('problem_2/Unlocked');
 % subsystem is active at all times. Whenever the control changes, the
 % states are neatly handed off between the two.
 
-open_system('problem_2/Locked');
+open_system('problemm_2/Locked');
 
 %%
 % *Figure 5:* The 'Locked' Subsystem
@@ -242,7 +242,7 @@ open_system('problem_2/Locked');
 % Open the 'Friction Mode Logic' subsystem by double clicking on it in the
 % model window. 
 
-open_system('problem_2/Friction Mode Logic');
+open_system('problemm_2/Friction Mode Logic');
 
 %%
 % *Figure 6:* The 'Friction Mode Logic' Subsystem
@@ -310,12 +310,12 @@ axis([0 10 -.2 2.2]);
 % occurs at about |t = 6.25 sec| as indicated by the separation of the
 % engine and vehicle speeds.  
 
-plot(Clutch_output.get('engine_speed').Values.Time, ...
-     Clutch_output.get('engine_speed').Values.Data,  'r', ...
-     Clutch_output.get('vehicle_Speed').Values.Time, ...
-     Clutch_output.get('vehicle_Speed').Values.Data, 'b', ...
-     Clutch_output.get('shaft_Speed').Values.Time, ...
-     Clutch_output.get('shaft_Speed').Values.Data,   'g'  );
+plot(Clutch_output.get('EngineSpeed').Values.Time, ...
+     Clutch_output.get('EngineSpeed').Values.Data,  'r', ...
+     Clutch_output.get('VehicleSpeed').Values.Time, ...
+     Clutch_output.get('VehicleSpeed').Values.Data, 'b', ...
+     Clutch_output.get('ShaftSpeed').Values.Time, ...
+     Clutch_output.get('ShaftSpeed').Values.Data,   'g'  );
 xlabel('Time (sec)');
 ylabel('Angular Speed (rad/sec)');
 legend('\omega_e - Engine Speed', '\omega_v - Vehicle Speed', '\omega - Shaft Speed');
@@ -336,8 +336,8 @@ title('Angular Velocities for Default Inputs');
 %
 % Close the model. Clear generated data.
 
-close_system('problem_2',0);
-clear problem_2_output;
+close_system('problemm_2',0);
+clear problemm_2_output;
 
 
 %% Conclusions
